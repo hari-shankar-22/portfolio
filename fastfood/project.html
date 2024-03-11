@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FAST FOOD DATA ANALYSIS</title>
+    <style>
+      body {
+        font-family: "Arial", sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f4f4f4;
+        color: #333;
+      }
+
+      header {
+        background-color: #333;
+        color: #fff;
+        padding: 20px;
+        text-align: center;
+      }
+
+      section {
+        max-width: 1000px;
+        margin: 20px auto;
+        padding: 20px;
+        background-color: #fff;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      }
+
+      img {
+        max-width: 100%;
+        height: auto;
+        border-radius: 8px;
+        margin-top: 20px;
+      }
+
+      footer {
+        text-align: center;
+        padding: 20px;
+        background-color: #333;
+        color: #fff;
+      }
+      #mypdf {
+        width: 100%;
+        height: 900px;
+      }
+    </style>
+    <style>
+      .mySlides {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body style="background-image: url('pic08.jpg')">
+    <header>
+      <h1>
+        FAST FOOD FRANCHISES 'S DATA ANALYSIS USING PYTHON AND VISUALIZATION
+        WITH POWER BI
+      </h1>
+    </header>
+
+    <section>
+    <pre style="font-family: 'Didot'">
+<h2>PROJECT REPORT</h2>        
+This project aims to analyze the nutritional content of fast food items using machine learning models. 
+The fast food dataset used for this analysis is sourced from kaggle. 
+The goal is to predict the 'Total Fat (g)' and 'Calories from Fat' values based on other nutritional features.
+
+<h3>Data Exploration and Preprocessing</h3>
+The initial steps involve importing necessary libraries and loading the dataset. 
+The dataset is explored to understand its structure, check for missing values, and handle duplicates. 
+Additionally, Label Encoding is applied to categorical columns ('Company' and 'Item') to make them suitable for modeling.
+
+<h3>Correlation Analysis</h3>
+A correlation matrix is computed to identify features that are positively or negatively correlated with the target variables
+('Total Fat (g)' and 'Calories from Fat'). Features with low correlation (|correlation| < 0.5) are dropped from the dataset.
+
+<h3>Feature Selection</h3>
+Forward selection is performed to identify the most relevant features for predicting 'Total Fat (g)' and 'Calories from Fat'. 
+The selected features are then used for training machine learning models.
+
+<h3>Model Training and Evaluation</h3>
+Three regression models are employed: Linear Regression, Random Forest, and Gradient Boosting. 
+The models are trained on the selected features and evaluated using metrics such as R2 Score, Mean Absolute Error (MAE),
+and Root Mean Squared Error (RMSE).The performance of each model is assessed on a test set.
+
+<h3>Results</h3>
+The best-performing model is identified based on the highest R2 Score. 
+Feature importance is visualized to understand the contribution of each feature in predicting the target variables.
+
+<h3>Conclusion</h3>
+The report concludes with insights into the nutritional analysis of fast food items, 
+highlighting the most influential factors contributing to 'Total Fat (g)' and 'Calories from Fat'. 
+The best-performing model is recommended for further use in predicting these nutritional values. 
+It's important to note that the predictive accuracy of the models may be influenced by the dataset's characteristics and 
+the inherent complexity of nutritional analysis.
+      </pre>
+    </section>
+<center>
+    <section style="width: 50%;">
+      <div class="w3-content w3-section" style="max-width: 500px">
+        <img class="mySlides" src="1.jpg" style="width: 100%" />
+        <img class="mySlides" src="2.jpg" style="width: 100%" />
+        <img class="mySlides" src="3.jpg" style="width: 100%" />
+        <img class="mySlides" src="4.jpg" style="width: 100%" />
+      </div>
+</Center>
+      <script>
+        var myIndex = 0;
+        carousel();
+
+        function carousel() {
+          var i;
+          var x = document.getElementsByClassName("mySlides");
+          for (i = 0; i < x.length; i++) {
+            x[i].style.display = "none";
+          }
+          myIndex++;
+          if (myIndex > x.length) {
+            myIndex = 1;
+          }
+          x[myIndex - 1].style.display = "block";
+          setTimeout(carousel, 2000); // Change image every 2 seconds
+        }
+      </script>
+    </section>
+
+    <section>
+      <h2>CODE SNIPPETS :</h2>
+      <embed id="mypdf" src="ff.pdf#toolbar=0" />
+      
+    </section>
+    <section>
+    <h2>POWER BI - DASHBOARD :</h2>
+    <H4>BarPlot shows level of Fat amonng all  Fast Food outlets.<br>
+        Multi-row cards show Sum of Calories (ALL ITEMS) of each company.<br>
+        Funnel Plot shows Sum of Protein by Company.<br>
+        TreeMap show distribution of all Nutrients of each Company.</H4> <br>
+
+        <embed id="mypdf" src="ffanalysis.pdf#toolbar=0" />
+    <pre>
+
+    </pre>
+    </section>
+
+  
+
+    <footer>
+      <p>&copy; HSR</p>
+    </footer>
+  </body>
+</html>
